@@ -1,4 +1,5 @@
 // Load environment variables from .env file (if available)
+require("dotenv").config();
 
 // Import required modules from discord.js
 const { REST, Routes } = require("discord.js");
@@ -6,8 +7,6 @@ const { REST, Routes } = require("discord.js");
 const fs = require("fs");
 
 const path = require("path");
-
-require("dotenv").config();
 
 // Load bot credentials from config.json
 const TOKEN = require("./config/config.json").token;

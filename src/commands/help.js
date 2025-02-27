@@ -5,6 +5,6 @@ module.exports = {
         .setName("help")
         .setDescription("Lists all available commands."),
     async execute(interaction) {
-        await interaction.reply("Available commands: `/ping`, `/help`");
+        await interaction.reply("Available commands: `/ping`, `/help`, `/scramble`");
     },
 };
