@@ -53,13 +53,13 @@ module.exports = {
         const scrambled = scrambleWord(originalWord);
 
         // Send the scrambled word as a challenge to the user
-        await interaction.reply(`**Unscramble this word:** \`${scrambled}\`\n⏳ You have **20 seconds**! Reply with your guess.`);
+        await interaction.reply(`**Unscramble this word:** \`${scrambled}\`\n⏳ You have **25 seconds**! Reply with your guess.`);
 
         // Define a filter to collect messages only from the user who initiated the command
         const filter = response => response.author.id === interaction.user.id;
 
         // Start a message collector to listen for the user's response within 20 seconds
-        const collector = interaction.channel.createMessageCollector({ filter, time: 20000, max: 1 });
+        const collector = interaction.channel.createMessageCollector({ filter, time: 25000, max: 1 });
 
         // Event handler for when a message is collected (i.e., the user attempts to guess)
         collector.on('collect', msg => {
