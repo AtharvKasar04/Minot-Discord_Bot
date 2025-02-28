@@ -1,12 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 
 // Dictionary of words categorized by length
-const words = {
-    4: ["game", "code", "bike", "road"],
-    5: ["apple", "chair", "board", "brick"],
-    6: ["planet", "laptop", "winter", "guitar"],
-    7: ["picture", "subject", "kitchen", "monster"],
-};
+const words = require('../words');
 
 /**
  * Function to scramble a word by shuffling its characters randomly.
@@ -34,6 +29,9 @@ module.exports = {
                     { name: '5 letters', value: 5 },
                     { name: '6 letters', value: 6 },
                     { name: '7 letters', value: 7 },
+                    { name: '8 letters', value: 8 },
+                    { name: '9 letters', value: 9 },
+                    { name: '10 letters', value: 10 },
                 )),
 
     async execute(interaction) {
